@@ -1,0 +1,9 @@
+以現在位置為例
+下面是node上排顯示的樣子
+USER@DESKTOP-R4KO5HV MINGW64 /d/practicehard/javascript/javascript_start
+$
+
+要選expressions_vs_statement檔案夾然後要找裡面if_else_statements.js在node上執行
+寫成 node expressions_vs_statement/if_else_statements.js 可執行
+
+要繼續用時，按上鍵，搜尋上次執行

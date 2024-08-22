@@ -1,0 +1,15 @@
+//程式是從上往下執行
+//第一個條件已經符合，就執行第一個就不會往下跑了
+//就算第二個條件也是符合的
+const n = 1;
+if (n < 3) {
+  console.log("n<3");
+} else if (n < 2) {
+  console.log("n<2");
+} else if (n < 1) {
+  console.log("n<1");
+} else {
+  console.log("n>=3");
+}
+
+//這樣寫的邏輯是錯誤的

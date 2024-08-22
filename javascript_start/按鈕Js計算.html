@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    #hamNumId,
+    #colaNumId {
+        width: 30px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按鈕JS計算</title>
+</head>
+
+<body>
+    <p>店員:今天想點什麼?</p>
+    <p>客人:我要<input type="text" id="hamNumId">個漢堡,還有<input type="text" id="colaNumId">杯可樂</p>
+    <p>店員<button id="countId">計算中</button>，一共是<em id="totalId"></em>元</p>
+
+</body>
+
+<!-- <script>
+    //第一種寫法，直接將相加值放入totalId
+    //點選按鈕會觸發一個事件聆聽，有一個匿名函式
+    // total函式，會把hamNumId的值拿出來和用變數儲存的漢堡金額相乘，和colaNumId的值拿出來和用變數儲存的可樂金額相乘
+    // 然後兩者相加是總金額，放到totalId這個欄位
+
+    document.getElementById('countId').onclick = function () {
+        var hamPrice = 80;
+        var colaPrice = 20;
+        //取得輸入欄位，轉換成數字並計算總金額
+        //輸入欄位不轉換成整數，Js會判斷成字串
+
+        var total = (parseInt(document.getElementById('hamNumId').value || 0)) * hamPrice +
+            parseInt(document.getElementById('colaNumId').value || 0) * colaPrice;
+        
+        // 將總金額顯示在totalId元素中
+         document.getElementById('totoalId').textContent = total;
+    }
+   
+
+   
+
+</script> -->
+
+<script>
+    //第二種寫法
+
+    document.getElementById('countId').onclick = function () {
+        var hamPrice = 80;
+        var colaPrice = 20;
+
+        var hamNum = parseInt(document.getElementById('hamNumId').value);
+        var colaNum = parseInt(document.getElementById('colaNumId').value);
+
+        // 如果使用者沒有輸入數字，設定預設值為0
+        if (isNaN(hamNum)) hamNum = 0;
+        if (isNaN(colaNum)) colaNum = 0;
+
+        // 計算總金額
+        var total = hamNum * hamPrice + colaNum * colaPrice;
+
+        // 將總金額顯示在totalId元素中
+        document.getElementById('totalId').textContent = total;
+    }
+</script>
+
+
+
+
+
+</html>
